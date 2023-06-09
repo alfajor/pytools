@@ -1,7 +1,7 @@
 # PyTools
-An ongoing collecion of Python scripts for different tasks - web scraping, automation, whatever. 
+An ongoing collection of Python scripts for different tasks - web scraping, automation, information gathering, whatever. All scripts are POC.  
 
 ## Usage
-Make sure Python3 is installed - aliases are great. 
+Make sure Python3 is installed. 
 
 `pip3 install -r requirements.txt` and `python <script>`

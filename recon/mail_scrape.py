@@ -1,13 +1,19 @@
+import sys
 from bs4 import BeautifulSoup
 import requests
 from colorama import init, Fore
 init()
 
+def usage():
+    if len(sys.argv) < 2:
+        print('Usage: {} <url>. Please provide a URL'.format(sys.argv[0]))
+        sys.exit(1)
+usage()
+
 # scrape any and all email addresses and export to a file. 
 def mail_scraper():
     try:
-        # url = input(Fore.GREEN + 'Enter a URL: ')
-        url = 'http://example.com'
+        url = str(sys.argv[1])
         response = requests.get(str(url))
     except requests.exceptions.RequestException as err:
         print('There was an error in the supplied URL: {}'.format(err))
@@ -41,6 +47,6 @@ def mail_scraper():
              print('Unable to write data to file.')
             
     elif answer.lower() in ['n', 'no']:
-        print('goodbye')    
+        print('ok, goodbye')    
 
 mail_scraper()
