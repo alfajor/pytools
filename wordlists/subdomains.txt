@@ -1,0 +1,8 @@
+admin
+login 
+ftp
+sftp
+api
+dev
+test
+mail
