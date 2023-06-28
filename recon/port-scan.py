@@ -11,7 +11,7 @@ usage()
 def scanner():
     target = str(sys.argv[1])
     # common interesting ports
-    target_ports = [21, 22, 443, 80, 8080]
+    target_ports = [20, 21, 22, 443, 80, 53, 143]
     port_scanner = nmap.PortScanner()
 
     try:
