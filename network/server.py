@@ -4,7 +4,7 @@ def transfer_files(conn, cmd):
     conn.send(cmd.encode())
     take, path = cmd.split('*')
     # target transfer path on host
-    file = open('/home/path/somedirectory'+path, 'wb')
+    file = open('/User/Some/Path'+path, 'wb')
 
     while True:
         bits = conn.recv(1024)
